@@ -68,7 +68,7 @@ Ex: lastOfArray(["t","u","g","x"]) => "x"
 // array.shift()
 // array.unshift(1,3,4,6,8)
 // array.push(10)
-// console.log(array);
+// console.log("6",array);
 
 // => [1,3,4,6,8,9,10]
 
