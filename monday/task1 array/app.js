@@ -5,11 +5,11 @@
 
 1
 // Correct the syntax error
- [ 1,7 , 9 , 45, ]
+//  [ 1,7 , 9 , 45, ]
 
- ["Str", "alex","moh"]
+//  ["Str", "alex","moh"]
 
- ['the', 'fox', 'over', 'lazy', 'dog'  ]
+//  ['the', 'fox', 'over', 'lazy', 'dog'  ]
 
 
 
@@ -26,13 +26,13 @@
 
 3
 // Create an array represents your:
-let Food=["mansef","maqloba","pizza","kabsa","briany"]
-let sport=["boxing","swimming","horse riding"]
-let movie=["FURE","1917","interstellar","the green mael"]
+// let Food=["mansef","maqloba","pizza","kabsa","briany"]
+// let sport=["boxing","swimming","horse riding"]
+// let movie=["FURE","1917","interstellar","the green mael"]
 
-1- Favorite [Food] (5)
-2- Favorite [Sport] (3)
-3- Favorite [Movie] (4)
+// 1- Favorite [Food] (5)
+// 2- Favorite [Sport] (3)
+// 3- Favorite [Movie] (4)
 
 
 
@@ -42,9 +42,8 @@ let movie=["FURE","1917","interstellar","the green mael"]
 // that take an array as a parameter
 // and return the first element in an array
 
-Ex: firstOfArray([1,4,5]) => 1
-Ex: firstOfArray(["t","u","g","x"]) => "t"
-
+// Ex: firstOfArray([1,4,5]) => 1
+// Ex: firstOfArray(["t","u","g","x"]) => "t"
 
 
 /*
@@ -62,13 +61,13 @@ Ex: lastOfArray(["t","u","g","x"]) => "x"
 6
 // Using console make this array to be like this one (push, unshift, shift, pop)
 
-// var array = [0,5,7,9]
-// array.shift()
-// array.shift()
-// array.shift()
-// array.unshift(1,3,4,6,8)
-// array.push(10)
-// console.log("6",array);
+var array = [0,5,7,9]
+array.shift()
+array.shift()
+array.shift()
+array.unshift(1,3,4,6,8)
+array.push(10)
+console.log("6",array);
 
 // => [1,3,4,6,8,9,10]
 
@@ -78,14 +77,14 @@ Ex: lastOfArray(["t","u","g","x"]) => "x"
 7
 // Using the console try to figure out what the thing that’s (push, unshift, shift, pop) return to you
 
-// var array2 = [5,9,-7,3.5]
-// array2.shift()
-// array2.push()
-// array2.push()
-// array2.pop()
-// array2.unshift(3.5)
-// console.log();
-// /*
+var array2 = [5,9,-7,3.5]
+array2.shift()
+array2.push()
+array2.push()
+array2.pop()
+array2.unshift(3.5)
+console.log("7",array2);
+
 
 
 // 8
@@ -97,10 +96,26 @@ Ex: lastOfArray(["t","u","g","x"]) => "x"
 // Ex: middleOfArray([1,4,5]) => 4
 // Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 // */
+// array9=[5,8,9,14,18];
+// function middleOfArray(array9){
+//   if(array9.length % 2 === 1){
+//         return array9[Math.floor(array9.length/2)];
+//     }else {
+//         return `${array9[array8.length/2 - 1]} and ${array9[array9.length/2]}`;
+//     }
+//
+Array=[5,8,9,14,18];
+function middleOfArray(Array){
+  if(array.length % 2 === 1){
+        return array[Math.floor(array.length/2)];
+    }else {
+        return `${array[array.length/2 - 1]} and ${array[array.length/2]}`;
+    }
+}
 
 
 
-
+// 9
 // Using assignment operator (=)
 // make the animals array have these animals
 // var animals = ['cat', 'ele', 'bird']
@@ -132,6 +147,15 @@ Ex: lastOfArray(["t","u","g","x"]) => "x"
 // **try more cases by your self
 // */
 
+let array5=[5,8,9,10,12,15];
+let index3;
+function indexOfArray(array5,index3){
+    index3= Math.floor(Math.random() * (array5.length));
+return array5[index3];
+}
+console.log("10",array5);
+
+
 
 /*
 11
@@ -144,6 +168,13 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 
 **try more cases by your self
 */
+let array6=[5,8,9,10,12,15];
+function arrayExceptLast(array6){
+    array6.pop();
+ return array;
+}
+arrayExceptLast(array6);
+console.log("11",array6);
 
 
 /*
@@ -187,6 +218,7 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
 
 
 /*
@@ -294,6 +326,7 @@ Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
 
 
 /*

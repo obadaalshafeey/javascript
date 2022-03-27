@@ -88,6 +88,22 @@ let persons = [
   
   Ex: olderPerson(persons) => "Soso Al-Amora"
   */
+  function olderperson(x)
+  {
+      let highest = 0 ;
+      let highestindex = 0 ; 
+      let i = 0 ;
+      while(i < x.length)
+      {
+          if (highest < x[i].age)
+          {
+              highestindex = i ;
+              highest = x[i].age
+          }
+          i++
+      }
+      return x[highestindex].name.first + " " + x[highestindex].name.last
+  }
   
   
   /*
@@ -160,7 +176,16 @@ let persons = [
   Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
   =>  {a: 1, cat: 3}
   */
-  
+  function selectFromObject(object,array){
+    let obj={};
+    for(let i=0;i<array.length;i++){
+        if(Object.keys[object[i]]==array[i]){
+            return object[i];
+        }
+    }
+}
+console.log(selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));
+innerHTML=selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']);
   
   /*
   10
@@ -230,4 +255,8 @@ let persons = [
   => ['firstName', 'age', 'movies']
   
   */
+  // function keysArray(object){
+  //   let keys=Object.keys(object)
+  //   return keys
+  // }
   

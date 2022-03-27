@@ -112,7 +112,10 @@ function  double3 (x){
 // Ex: cube(4)
 // => 64
 
-
+console.log(cube(4));
+function cube(num){
+  return num*num*num
+}
 
 
 
@@ -126,6 +129,10 @@ Ex: multiply(3,4)
 Ex: multiply(5,4)
 => 20
 */
+console.log(multiply(3,4));
+function multiply(num1,num2){
+  return num1*num2;
+}
 
 
 /*
@@ -174,6 +181,11 @@ Ex: largerNubmer(5,6)
 Ex: largerNubmer(5,3)
 => 5
 */
+console.log(largerNumber(5,6));
+function largerNumber(num1,num2){
+  if(num1>num2)  return num1;
+  else return num2;
+}
 
 
 /*
@@ -195,6 +207,15 @@ Ex: smallerNubmer(5,3,3)
 => 3
 
 */
+console.log(smallerNubmer(2,8,1));
+function smallerNubmer(num1,num2,num3){
+  let arr=[num1,num2,num3];
+  let min=Infinity;
+  for(let i=0;i<arr.length;i++){
+    if (min>arr[i]){
+      min=arr[i];
+    }} 
+return min;  }
 
 /*
 13
@@ -250,6 +271,12 @@ Ex: isEven(2)
 => true
 
 */
+console.log(isEven(1));
+function isEven(num){
+  if(num%2===0){
+    return true;
+  }else return false;
+}
 
 
 /*
@@ -265,7 +292,12 @@ Ex: isOdd(5)
 => true
 
 */
-
+console.log(isOdd(1));
+function isOdd(num){
+  if(num%2!==0){
+    return true;
+  }else return false;
+}
 
 /*
 17
@@ -293,6 +325,9 @@ Ex: fullName("Adam","McCallen")
 Ex: fullName("Alex", "Mercer")
 => "Alex Mercer"
 */
+function fullName(fname,lname){
+  return `${fname}+${lname}`;
+}
 
 
 /*
@@ -324,6 +359,11 @@ Ex: randomNumber()
 => 0.475
 
 */
+console.log(randomNumber());
+function randomNumber(){
+  return Math.random();
+}
+
 
 /*
 21
@@ -339,6 +379,10 @@ Ex: randomBetweenNumbers(3,100)
 => 23
 
 */
+console.log(randomBetweenNumbers(1,8))
+function randomBetweenNumbers(num1,num2){
+  return Math.random() * (num2 - num1) + num1;
+}
 
 
 /*
@@ -380,6 +424,12 @@ Ex: counter()
 => 3
 
 */
+let i=0;
+console.log(counter());
+console.log(counter());
+function counter(){
+return i++;
+}
 
 
 /*

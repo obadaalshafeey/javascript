@@ -74,17 +74,29 @@ Important: the continue condition should be [somthing !== 0]
 Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
-function repeatStr(string,number) {
-    let repeatStr=` `;
-    while (number!==0) {
-        
-        repeatStr+=string;
-        number--,
+
+console.log(repeatStr("to",2));
+function repeatStr(d1,sol){
+    let x="";
+    let i=sol;
+    while(i!==0){
+        x+=d1;
+        x+=" ";
+        i--;
     }
-    return repeatStr
-
+    return x;
 }
-
+console.log(repeatStr("to",4));
+function repeatStr(d1,sol){
+    let x="";
+    let i=sol;
+    while(i!==0){
+        x+=d1;
+        x+=" ";
+        i--;
+    }
+    return x;
+}
 
 
 
@@ -101,15 +113,26 @@ Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
 
-function sum2(x,y) {
-    let sum =0;
-while (x<=y) {
-    sum=sum+x;
-    x++;
+console.log(sum2(3,6));
+function sum2(num1,num2){
+     let i=num1;
+     let sum=0;
+    while(i>=num1 && i<=num2){
+        sum+=i;
+        i++;
+    }
+    return sum;
 }
-return sum
+console.log(sum2(2,4));
+function sum2(num1,num2){
+     let i=num1;
+     let sum=0;
+    while(i>=num1 && i<=num2){
+        sum+=i;
+        i++;
+    }
+    return sum;
 }
-document.getElementById("d2") .innerHTML=sum2(4,6);
 
 
 /*
@@ -123,6 +146,17 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
+console.log(repeatStr2("ro","fff"));
+function repeatStr2(str1,str2){
+    let i=str2.length;
+    let newStr="";
+    while(i!==0){
+        newStr+=str1;
+        newStr+=" ";
+        i--;
+    }
+    return newStr;
+}
 
 
 /*
@@ -147,6 +181,17 @@ from the first number to the second number
 Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
+
+console.log(muti2(3,6));
+function muti2(num1,num2){
+     let i=num1;
+     let multi=1;
+    while(i>=num1 && i<=num2){
+        multi*=i;
+        i++;
+    }
+    return multi;
+}
 
 
 /*
@@ -190,6 +235,26 @@ multiplication2(5,4) => 20
 multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
+console.log(multiplication2(5,4));
+function multiplication2(num1,num2){
+    return num1*num2;
+
+
+}
+
+console.log(multiplication2(4,4));
+function multiplication2(num1,num2){
+    return num1*num2;
+
+
+}
+console.log(multiplication2(7,6));
+function multiplication2(num1,num2){
+    return num1*num2;
+
+
+}
+
 
 /*
 11
@@ -218,6 +283,17 @@ repeatChar("school","a") => 0
 repeatChar("School","s") => 1
 try more case by yourself
 */
+console.log(repeatChar("school","O"))
+function repeatChar(str,char){
+    let count=0;
+    let i=0;
+    while(i<str.length){
+        if(char.toLowerCase()==str.charAt(i)){
+            count++;
+        }
+        i++;
+    }
+    return count;}
 
 
 
@@ -226,103 +302,4 @@ try more case by yourself
 
 
 
-
-
-
-
-// Advanced Part {for your benefits}
-
-// Dont solve any question here if you didnt 
-//finish all the question a bove with your pair
-
-// This part you can try it and solve solo not with your pair
-
-// This part is extra (and there is no help from the trainer) it is good to try it
-
-
-/*
-1
-Create a function called fibon
-that takes 1 parameter a number,
-and return the fibonacci for this number
-Ex: fibon(7); => 21
-Ex: fibon(2); => 2
-Ex: fibon(1); => 1
-Ex: fibon(0); => 1
-fib(n)=fin(n-1)+fib(n-2)
-fibon(n): 1 1 2 3 5 8 13 21
-          | | | | | |  |  |
-n:        0 1 2 3 4 5  6  7
-*/
-
-
-/*
-2
-Write a function called mirror
-that takes one parameter a string
-and return the reversed string
-**hint: "str"[0] => "s"
-**hint: "car"[1] => "a"
-** Important: You should dint have extra space at the end
-mirror("school") => "loohcs"
-mirror("car") => "rac"
-mirror("maDrasa") => "asarDam"
-*/
-
-
-
-/*
-3
-Write a function called mirrorCaseAlso
-that takes one parameter a string
-and return the reversed string order
-and the lower case to upper case
-and the upper case to lower case
-**hint: seacrh in MDN how "a" => "A" and "A" => "a"
-** Important: You should dint have extra space at the end
-mirrorCaseAlso("sChOol") => "LOoHcS"
-mirrorCaseAlso("THOR") => "roht"
-mirrorCaseAlso("BaBa") => "AbAb"
-*/
-
-
-
-/*
-4
-Write a function called repeatChar2
-that takes two parameters
-and return the times that this char
-wit case sensetive
-repeat inside this string
-**hint: "str"[0] => "s"
-**hint: "car"[1] => "a"
-**hint: seacrh in MDN how "a" => "A" and "A" => "a"
-repeatChar2("schOol","o") => 1
-repeatChar2("school","a") => 0
-repeatChar2("School","S") => 1
-try more case by yourself
-*/
-
-
-/*
-5
-Create a function called HiSayHelloTo
-that takes 1 parameter a number that represent
-the nubmer of people come to an event,
-and say hi to each person sepretadly
-+ let him/her say hello to each one that comes before him/her
-Ex: welcomeSayHello(3);
-=>
-hi 1
-hi 2 Now Pleas Say Hello To 1
-hi 3 Now Pleas Say Hello To 1 and 2
-Ex: welcomeSayHello(7); =>
-hi 1
-hi 2 Now Pleas Say Hello To 1
-hi 3 Now Pleas Say Hello To 1 and 2
-hi 4 Now Pleas Say Hello To 1, 2 and 3
-hi 5 Now Pleas Say Hello To 1, 2, 3 and 4
-hi 6 Now Pleas Say Hello To 1, 2, 3, 4 and 5
-hi 7 Now Pleas Say Hello To 1, 2, 3, 4, 5 and 6
-*/
 
