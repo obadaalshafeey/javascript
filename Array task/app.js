@@ -3,7 +3,7 @@
 // // Nested arrays.................
 // let myfriends = ["saja", "marwa" , "aya" ,"sara"]
 
-// console.log(`hello ${myfriends[0,1,2,3]}`);
+// console.log(`hello ${myfriends[0,1]}`);
 // console.log(`hello ${myfriends[2]}`);
 
 // // chenge arrays......................

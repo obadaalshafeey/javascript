@@ -1,15 +1,15 @@
- All the exercises should use while loop:
+//  All the exercises should use while loop:
 
- Please be sure to connect this file to another HTML file
+//  Please be sure to connect this file to another HTML file
 
- Don’t search on the internet except if it is written in the           question
+//  Don’t search on the internet except if it is written in the           question
 
-You should solve all the question by what you understand from the lecture
- and with your pair not solo
+// You should solve all the question by what you understand from the lecture
+//  and with your pair not solo
 
- And don’t look or use a code that you wrote before 
+//  And don’t look or use a code that you wrote before 
 
-console.log('Here is : While')
+// console.log('Here is : While')
 
 /*
 1
@@ -22,6 +22,20 @@ Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
 
+function subtract(d1){
+let sol=d1;
+while(d1>0){
+
+    d1-=1
+    sol-=d1   
+}
+return sol;
+}
+console.log(subtract(2) +" ,"+subtract(5)+" ,"+subtract(9));
+document.write(subtract(2) +" ,"+subtract(5)+" ,"+subtract(9))
+
+
+
 
 /*
 2
@@ -31,6 +45,22 @@ and return the product of all integers up to n starting from 1
 Ex: factorial(2); => 2 * 1 => 2
 Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 */
+function factorial(d1){
+let sol=1;
+while (d1>1) {
+   
+    sol*=d1;
+   d1--;
+}
+
+return sol;
+
+
+}
+console.log(factorial(2)+ ", " +factorial(4));
+
+
+
 
 
 /*
@@ -44,6 +74,22 @@ Important: the continue condition should be [somthing !== 0]
 Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
+function repeatStr(string,number) {
+    let repeatStr=` `;
+    while (number!==0) {
+        
+        repeatStr+=string;
+        number--,
+    }
+    return repeatStr
+
+}
+
+
+
+
+
+
 
 
 /*
@@ -54,6 +100,16 @@ and will return the sumation from the first number to the second number
 Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
+
+function sum2(x,y) {
+    let sum =0;
+while (x<=y) {
+    sum=sum+x;
+    x++;
+}
+return sum
+}
+document.getElementById("d2") .innerHTML=sum2(4,6);
 
 
 /*

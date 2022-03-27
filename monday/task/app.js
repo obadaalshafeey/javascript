@@ -5,11 +5,11 @@
 
 1
 // Correct the syntax error
-//  [ 1,7 , 9 , 45, ]
+ [ 1,7 , 9 , 45, ]
 
-//  ["Str", "alex","moh"]
+ ["Str", "alex","moh"]
 
-//  ['the', 'fox', 'over', 'lazy', 'dog'  ]
+ ['the', 'fox', 'over', 'lazy', 'dog'  ]
 
 
 
@@ -26,25 +26,25 @@
 
 3
 // Create an array represents your:
-// let Food=["mansef","maqloba","pizza","kabsa","briany"]
-// let sport=["boxing","swimming","horse riding"]
-// let movie=["FURE","1917","interstellar","the green mael"]
+let Food=["mansef","maqloba","pizza","kabsa","briany"]
+let sport=["boxing","swimming","horse riding"]
+let movie=["FURE","1917","interstellar","the green mael"]
 
-// 1- Favorite Food (5)
-// 2- Favorite Sport (3)
-// 3- Favorite Movie (4)
+1- Favorite [Food] (5)
+2- Favorite [Sport] (3)
+3- Favorite [Movie] (4)
 
 
 
-/*
+
 4
-Create a function called firstOfArray
-that take an array as a parameter
-and return the first element in an array
+// Create a function called firstOfArray
+// that take an array as a parameter
+// and return the first element in an array
 
 Ex: firstOfArray([1,4,5]) => 1
 Ex: firstOfArray(["t","u","g","x"]) => "t"
-*/
+
 
 
 /*

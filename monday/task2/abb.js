@@ -1,16 +1,19 @@
-/*
+
 1
-Write a function named tellFortune that:
-takes 4 arguments: number of children,
-partner's name, geographic location, job title.
-outputs your fortune to the screen like so:
-"You will be a X in Y, and married to Z with N kids."
+// Write a function named tellFortune that:
+// takes 4 arguments: number of children,
+// partner's name, geographic location, job title.
+// outputs your fortune to the screen like so:
+// "You will be a X in Y, and married to Z with N kids."
 
-Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
-=> "You will be a software engineer in Jordan, and married to Alice with 3 kids."
-*/
+// Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
+// => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 
+function tellFortune(a,b,c,d) {
+return ( `You will be a ${a} in ${b}, and married to ${c} with ${d} kids`)
+}
 
+console.log(tellFortune('software engineer', 'Jordan', 'Alice', 3));
 /*
 2
 Write a function named calculateDogAge that:
@@ -23,6 +26,11 @@ outputs the result to the screen like so:
 Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
+function calculateDogAge(age) {
+  let dog=age*7;
+  return (`Your doggie is ${dog} years old in dog years`)
+}
+console.log(calculateDogAge(1));
 
 
 /*
@@ -36,62 +44,76 @@ outputs the result to the screen like so:
 Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
+function calculateSupply(age,tea) {
+  let old=100-age;
+  let older =((old*365)*tea);
+  return (`You will need ${older} cups of tea to last you until the ripe old age of 100`)
+}
+console.log(calculateSupply(30, 3));
+ 
 
 
-/*
-4
-Write a function called greet that:
-takes 1 argument: name.
-and it will return hello + name
 
-Ex: greet("Adam")
-=> "Hello Adam"
-*/
+// 4
+// Write a function called greet that:
+// takes 1 argument: name.
+// and it will return hello + name
+
+// Ex: greet("Adam")
+// => "Hello Adam"
+function greet(name) {
+  return (` hello ${name}`)
+
+}
+greet("obada")
+console.log(greet("obada"));
 
 
-/*
+
 5
-what is the error:
+// what is the error:
 function double(cat) {
+  return 2 * cat;
+}
+
+function double(x) {
   return 2 * x;
 }
 
-function double(7) {
-  return 2 * 7;
-}
-
-function double('7') {
+function double(x) {
   return 2 * 'x';
 }
-*/
 
 
 
-/*
+
+
 6
-fix these functions:
-func double1(x {
+// fix these functions:
+function double1(x) {
   return 2 * x ;
 }
 
-functiondouble2 x)
+function double2 (x){
 return 2 * x;
 }
 
-function (x) double3 {
+function  double3 (x){
   return 2 * x;
+}
 
-*/
 
 
-/*
-7
-Write a function called cube that:
-accept 1 parameter and calculate the cube of this number
 
-Ex: cube(4)
-=> 64
-*/
+// 7
+// Write a function called cube that:
+// accept 1 parameter and calculate the cube of this number
+
+// Ex: cube(4)
+// => 64
+
+
+
 
 
 /*
