@@ -424,13 +424,20 @@ Ex: counter()
 => 3
 
 */
-let i=0;
-console.log(counter());
-console.log(counter());
-function counter(){
-return i++;
+let c=0;
+
+function counter1() {
+
+  c++ ; return c
+  
 }
 
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
 
 /*
 24
@@ -463,4 +470,14 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
+ 
+function naresetCounterme() {
+  let x =c;
+  c=0 ;
+  return `${x}and the counter reset now`
 
+}
+console.log(naresetCounterme());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());

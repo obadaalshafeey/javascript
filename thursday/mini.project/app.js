@@ -63,3 +63,38 @@ function informationprint() {
 
     }
 }
+
+
+// //////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+let form= document.getElementById('locForm');
+let result= document.getElementById("cityResult");
+let showRes= document.getElementById("btn2");
+let img= document.getElementById("img");
+
+showRes.addEventListener('click',showLocation);
+
+function showLocation(){
+    let loc_name= document.getElementById("loc_Name").value;
+
+    new locConstructor(loc_name)
+}
+
+function locConstructor(loc_name){
+    this.location= loc_name;
+    console.log(this);
+    showOnPage(this.location)
+}
+async function showOnPage(x){
+    let locReq= await fetch(`https://eu1.locationiq.com/v1/search.php?key=pk.1dd34aa6546423b1c1d1a72ee949f992&q=${x}&format=json`)
+    let data=await locReq.json()
+    console.log(data);
+    
+    
+    result.innerHTML = `<h3 style="display:inline;"> location :</h3> ${data[0].display_name} <br> 
+    <h3 style="display:inline;">lat:</h3> ${data[0].lat} <br> 
+    <h3 style="display:inline;">lon:</h3> ${data[0].lon}`;
+    img.src= `${data[0].icon}`;   
+    
+   
+}

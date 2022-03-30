@@ -224,6 +224,19 @@ countDown(2)
 countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
 */
+function countDown(a) {
+   let arr=[]
+    while (a>0) {
+    arr.push(a)
+a--
+    }
+    if (a==0) {
+        arr.push("done")
+    }
+    return `${arr.join(', ')}`
+}
+
+console.log(countDown(9));
 
 /*
 10
