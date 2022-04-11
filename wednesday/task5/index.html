@@ -5,31 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #btn
-        {
-            display: none;
-        }
-        div
-        {
-            display: inline;
-            color: red;
-            font-weight: bold;
-            font-size: small;
-        }
-    </style>
 </head>
 <body>
-  Enter password :  <input type="password" name="" id="pass1" onchange="onchan()" >
-  <div class="err"></div>
-  <br><br>
-  Enter password :  <input type="password" name="" id="pass2" onchange="onchan2()">
-  <div class="err"></div>
-  <br><br>
-  <button id="btn">Submit</button>
-    
-</body>
-<script src="./Task5.js">
 
-</script>
+    <form onsubmit="input()">
+      
+        <label for="password1">Password (min 6 characters): </label>
+        <input name="password" type="password" placeholder="password"  id="pass1"/>
+        <div id="passcheck1" ></div>
+        <label for="password2">Repeat password: </label>
+        <input name="repeatpassword" type="password" placeholder="confirm password" id="pass2" onkeyup="checkPass(); false;" />
+        <div id="error-nwl"></div>
+
+        <button id="Submit">Submit</button>
+    </form>
+
+
+    <script src="./app.js"></script>
+</body>
 </html>

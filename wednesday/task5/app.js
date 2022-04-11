@@ -1,43 +1,31 @@
-
-
-let txtmsg = document.getElementsByClassName("err");
-
-
-
-
-function onchan()
+function checkPass()
 {
-    let x = document.getElementById("pass1").value;
-console.log(x);
-let y = document.getElementById("pass2").value;
+    let pass1 = document.getElementById('pass1');
+    let pass2 = document.getElementById('pass2');
+    let message = document.getElementById('error-nwl');
+    let goodColor = "#66cc66";
+    let badColor = "#ff6666";
 
-    if (x.length < "6")
-{
-    txtmsg[0].innerHTML = "Password should be more than 6";
-}
-    
-if (x.length >= "6")
-{
-    txtmsg[0].innerHTML = "";
-}
-
-
-
-}
-function onchan2()
-{
-    let x = document.getElementById("pass1").value;
-console.log(x);
-let y = document.getElementById("pass2").value;
-    if (x !== y )
-{
-    txtmsg[1].innerHTML = "The two passwords dont match";
-
-}
-if (x === y)
-{
-    document.getElementById("btn").style.display = "block";
-    txtmsg[1].innerHTML = "";
-}
-
-}
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "ok!"
+    }
+    else{
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " These passwords don't match"
+    }
+	
+    if(pass1.length > 5){
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "character number ok!"
+    }
+    else{
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " you have to enter at least 6 digit!"
+    }
+}  
+      
