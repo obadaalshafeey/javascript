@@ -1,60 +1,58 @@
+
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/style.css">
-    <title>phone Store</title>
-    
+    <script src="https://kit.fontawesome.com/ccfa87eec6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Phone Store</title>
 </head>
 <body>
-  <section class="contaner">
-      <div class="divForm">
+    <nav>
+        <h2>OCA Phone Store </h2>
+        <i class="fa-solid fa-mobile-screen"></i>
+    </nav>
+    <section class="container">
+    <div class="divForm">
         <form action="" id="mobForm">
             <fieldset>
-                <legend>Mobile Form</legend>
-                <label for="" id="userName">Name</label>
-                <br><input type="text" name="useName">
-                <br>
-                <br>
-                <label for="" id="locName">Location Name</label>
-                <br>
-                <input type="text" name="locName" id="locName">
-                <br>
-                <br>
-                <label for="" id="devisType">Type</label>
-                <select name="typeNameD" id="typeName">
-                    <option value="samsung">samsung</option>
-                    <option value="apple">apple</option>
-                    <option value="Huawi">Huawi</option>
-                </select>
-                <br><br>
-                <button type="submit">add device</button> 
+            <legend>Mobile Form</legend>
+            <label for="" id="userName">Name</label>
+            <br><input type="text" name="useName" id="client">
+            <br><br>
+            <label for="" id="devisType">Type</label>
+            <br>
+            <select name="typeNameD" id="typeName">
+                <option value="samsung">samsung</option>
+                <option value="apple">apple</option>
+                <option value="Huawi">Huawi</option>
+            </select>
+            <br><br>
+            <input type="button" id="btn" value="add device"> 
             </fieldset>
         </form>
-      </div>
-      <div id="result">
-        <h1>City Name</h1>
-        <p id="cityResult">
-         </p>
-           <img src="" id="imgSrc">
-      </div>
-      <div class="divTable">
+    </div>
+    <div class="divTable">
         <table id="tableCon">
-          <thead id="headTa">
-              <th>User name</th>
-              <th>Mobile type</th>
-              <th>Price</th>
-              <th>Condition</th>
-          </thead>
-          <tbody id="boadTa"></tbody>
-          <tfoot id="footTa"></tfoot>
+            <thead id="headTa">
+                <tr>
+                    <th>Client Name</th>
+                    <th>Phone Type</th>
+                    <th>Phone Price</th>
+                    <th>Phone Condition</th>
+                </tr>
+            </thead>
+            <tbody id="boadTa"></tbody>
+            <tfoot id="footTa"></tfoot>
         </table>
-        <div class="img"></div>
-      </div>
-  </section>
-    
-    <script src="./js/app.js"></script>
+
+    </div>
+    </section>
+   
+
+<script src="./app.js"></script>
 </body>
 </html>

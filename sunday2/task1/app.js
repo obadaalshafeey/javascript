@@ -1,101 +1,87 @@
-'use strict';
+'use strict'
+let Butn=document.getElementById("btn");
+let data=[];
 
-let formInfo=document.getElementById('mobForm');
-let table=document.getElementById('boadTa');
-let locResult=document.getElementById('result');
-let cusInfo=[];
-
-function localStorageX(){
-    let array=JSON.stringify(cusInfo);
-    localStorage.setItem('data',array);
+function storeInLocalStorage(){
+    let stored=JSON.stringify(data);
+    localStorage.setItem('clientsPur',stored);
 }
-function callFromLocalStorage(){
-    let obj=localStorage.getItem("data");
-    let newArray=JSON.parse(obj);
-    if (newArray !==null){
-      cusInfo= newArray;
+
+function CallFromLocalStorage(){
+    let getStored=localStorage.getItem('clientsPur');
+    let StoredData=JSON.parse(getStored);
+    if (StoredData != null){
+    let l=StoredData.length;
+    if (l != 0){
+        for(let i=0; i<l; i++){
+            let newRow= document.createElement('tr');
+            let newCol1= document.createElement('td');
+            let newCol2= document.createElement('td');
+            let newCol3= document.createElement('td');
+            let newCol4= document.createElement('td');
+            newRow.appendChild(newCol1);
+            newRow.appendChild(newCol2);
+            newRow.appendChild(newCol3);
+            newRow.appendChild(newCol4);
+            document.getElementById('boadTa').appendChild(newRow);
+            newCol1.innerHTML=StoredData[i].Name;
+            newCol2.innerHTML=StoredData[i].phoneT;
+            newCol3.innerHTML=StoredData[i].price;
+            newCol4.innerHTML=StoredData[i].cond;
+        }
+        for(let i=l-1; i>=0; i--){
+            data.unshift(StoredData[i]);
+        }
     }
-    renderInfo();
+    }
 }
 
-callFromLocalStorage()
+Butn.addEventListener("click", phonePurchase);
+function phonePurchase() {
+    let clientName=document.getElementById('client').value;
+    let phoneType=document.getElementById('typeName').value;
 
-function mobileForm(useName, typeNameD,locName){
-    this.useName=useName;
-    this.typeNameD=typeNameD;
-    this.locName=locName;
-    this.price=price();
-    this.usedOrNot=usedOrNot();
-    cusInfo.push(this);
-    getData(locName);
-    renderInfo();
-   localStorageX();
-    console.log(cusInfo);
+    new Client(clientName,phoneType);
 }
-function price(){
-    let cost=Math.ceil(Math.random() *(500-50)+100);
-    return cost;
-}
-function usedOrNot(){
-    let isUsed=mobileForm.price;
-    if(isUsed<100)
-    return 'Used';
-    else return 'New device';
-}
-formInfo.addEventListener('submit',handleSubmit);
-function handleSubmit(e) {
-    e.preventDefault();
-    let useName=e.target.useName.value;
-    let typeNameD=e.target.typeNameD.value;
-    let locName=e.target.locName.value;
-    new mobileForm(useName,typeNameD,locName)
-}
-handleSubmit();
-function renderInfo(){
-    table.textContent='';
+
+CallFromLocalStorage()
+function Client(clientName,phoneType){
+    this.Name=clientName;
+    this.phoneT=phoneType;
+    this.price= Math.floor(Math.random()*(500-50)+50);
+    let x;
+    if (this.price<100){
+        x= 'Used';
+    }else{
+        x= 'New Device';
+    };
+    this.cond= x;
     
-    for(let i=0;i<cusInfo.length;i++){
-        let row=document.createElement('tr');
-        let cell1=document.createElement('td');
-        let cell2=document.createElement('td');
-        let cell3=document.createElement('td');
-        let cell4=document.createElement('td');
-        /*Show in HTML page */
-        table.appendChild(row);
-        row.appendChild(cell1);
-        row.appendChild(cell2);
-        row.appendChild(cell3);
-        row.appendChild(cell4);
-        /*Add values for aech cell */
-        cell1.textContent=cusInfo[i].useName;
-        cell2.textContent=cusInfo[i].typeNameD;
-        cell3.textContent=cusInfo[i].price;
-        cell4.textContent=cusInfo[i].usedOrNot;
-    }
 
+    console.log(this);
+    data.push(this);
+    renderfun();
+    storeInLocalStorage()
+    console.log(localStorage.getItem('clientsPur'));
 }
 
-//********************************************************** */
+function renderfun(){
+    let newRow= document.createElement('tr');
+    let newCol1= document.createElement('td');
+    let newCol2= document.createElement('td');
+    let newCol3= document.createElement('td');
+    let newCol4= document.createElement('td');
+    newRow.appendChild(newCol1);
+    newRow.appendChild(newCol2);
+    newRow.appendChild(newCol3);
+    newRow.appendChild(newCol4);
+    document.getElementById('boadTa').appendChild(newRow);
 
-                    /*API */
+    let l=data.length-1;
 
-
-async function getData(location){
-   let response= await fetch(`https://eu1.locationiq.com/v1/search.php?key=pk.387c44093108cb229d491116cdb062a5&q=${location}&format=json`)
-   console.log(response);
-   let data=await response.json(); //transfer all the data that came from url (fetch) to json
-   console.log(data);
-   
-    let newP=document.createElement('p');
-    locResult.appendChild(newP);
-     newP.innerHTML=`Location Name: ${data[0].display_name} <br>
-     lat: ${data[0].lat} <br>
-     lon: ${data[0].lon}
-     <br>
-     `
-    let imgSrc=data[0].icon;
-    document.getElementById('imgSrc').src=`${imgSrc}`
+    newCol1.innerHTML=data[l].Name;
+    newCol2.innerHTML=data[l].phoneT;
+    newCol3.innerHTML=data[l].price;
+    newCol4.innerHTML=data[l].cond;
 }
 
-
-getData();
